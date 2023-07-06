@@ -4,7 +4,8 @@
 
 ## Introduction
 
-Hello! As part of my learning journey for SQL, I took on the #8weekSQLchallenge by Danny Ma. This repo contains my solution to the first case study of the challenge. For more details, visit their [website](https://8weeksqlchallenge.com/case-study-1/) 
+Hello! As part of my learning journey for SQL, I took on the #8weekSQLchallenge by Danny Ma. This repo contains my solution based on MS SQL server to the first case study of the challenge. For more details, visit their [website](https://8weeksqlchallenge.com/case-study-1/). 
+
 
 
 ## Problem Statement
@@ -25,4 +26,20 @@ Danny has shared with you 3 key datasets for this case study:
 Entity relationship diagram is as follows:
 
 ## Entity Relationship Diagram
+![ERD](ERD.png)
+
+## Case Study Questions
+---
+
+**1. What is the total amount each customer spent at the restaurant?**
+ ```
+     SELECT 
+  		customer_id as Customer, 
+  		CONCAT('$ ', SUM(price)) as Total_Spent
+  	FROM dbo.sales sal
+  	JOIN dbo.menu mnu
+  		ON sal.product_id = mnu.product_id
+  	GROUP BY customer_id
+
+ ```
 
