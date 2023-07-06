@@ -33,13 +33,12 @@ Entity relationship diagram is as follows:
 
 **1. What is the total amount each customer spent at the restaurant?**
  ```
-     SELECT 
-  		customer_id as Customer, 
-  		CONCAT('$ ', SUM(price)) as Total_Spent
-  	FROM dbo.sales sal
-  	JOIN dbo.menu mnu
-  		ON sal.product_id = mnu.product_id
-  	GROUP BY customer_id
-
+SELECT
+  customer_id as Customer,
+  CONCAT('$ ', SUM(price)) as Total_Spent
+FROM dbo.sales sal
+JOIN dbo.menu mnu
+  ON sal.product_id = mnu.product_id
+GROUP BY customer_id
  ```
 
