@@ -260,4 +260,10 @@ Danny also requires further information about the ranking of customer products, 
 ```
 ![12](QueryOutputs/12.png)
 
+**Key Insights**
+- The most purchased item is Ramen
+- Customer A and B spent $25 and $40 respectively prior to become members of Danny's Diner
+- Customer B visited Danny's Diner the most during the month of January
+  
+
 ### Thank you for taking your time in going through my solution :)
